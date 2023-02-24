@@ -5,27 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Previsão do tempo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../css/style.css" />
-    <script src="../js/script.js"></script>    
-
+    <script src="../js/script.js"></script>
   </head>
   <body>
     <nav>
       <h1>Previsão do tempo</h1>
     </nav>
-
+    <br />
     <section class="conteudo">
-      <label for="city">
-        Insira sua cidade:
-        <input type="text" name="city" id="city"/>
-      </label>
-
-      <br />
-      <br />
-
-      <button type="button" onclick="buscaInformacoes()">Buscar</button>
-
-      <div id="informacoesTempo"></div>
+      <section class="form">
+        <div class="input-group mb-3">
+          <input
+            type="text"
+            name="city"
+            id="city"
+            class="form-control"
+            placeholder="Insira sua cidade"
+          />
+          <button
+            class="btn btn-primary"
+            type="button"
+            id="button-addon2"
+            onclick="buscaInformacoes()"
+          >
+            Button
+          </button>
+        </div>
+        <div id="informacoesTempo" class=""></div>
+      </section>
     </section>
+
+    <footer>
+      <nav class="fixed-bottom">
+        2023 - Made by&nbsp;<a
+          href="https://github.com/GuiPassos01/previsao-do-tempo-javascript"
+          target="_blank"
+          >Guilherme Passos</a
+        >
+      </nav>
+    </footer>
   </body>
 </html>
