@@ -6,6 +6,11 @@ const buscaInformacoes = async () => {
 
   try {
     const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error('Não foi possível encontrar informações para esta cidade');
+    }
+
     const data = await response.json();
 
     const weatherInfo = document.getElementById("informacoesTempo");
@@ -19,6 +24,6 @@ const buscaInformacoes = async () => {
     <hr>
     `;
   } catch (error) {
-    console.log(error);
+    alert(error.message);
   }
 };
